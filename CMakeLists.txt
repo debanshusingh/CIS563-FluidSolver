@@ -51,9 +51,10 @@ set(CORE_LIBS ${GLFW_LIBRARY} ${GLUT_LIBRARY} ${GLEW_LIBRARY} ${JSONCPP} ${OPENG
 # OSX-specific hacks/fixes
 if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     #Link IOKit because this is where we get GL stuff for OSX
+    set(COCOA "-framework Cocoa")
     set(COREVIDEO "-framework CoreVideo")
     set(IOKIT "-framework IOKit")
-    set(CORELIBS ${CORELIBS} ${IOKIT} ${COREVIDEO})
+    set(CORELIBS ${CORELIBS} ${COCOA} ${IOKIT} ${COREVIDEO})
 endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
 # Linux specific hacks/fixes
