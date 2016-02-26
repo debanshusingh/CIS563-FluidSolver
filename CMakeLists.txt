@@ -54,7 +54,7 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     set(COCOA "-framework Cocoa")
     set(COREVIDEO "-framework CoreVideo")
     set(IOKIT "-framework IOKit")
-    set(CORELIBS ${CORELIBS} ${COCOA} ${IOKIT} ${COREVIDEO})
+    set(CORE_LIBS ${CORE_LIBS} ${COCOA} ${IOKIT} ${COREVIDEO})
 endif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
 
 # Linux specific hacks/fixes
